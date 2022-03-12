@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>627</width>
+    <height>315</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>PassGen</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #a73737, stop:1 #7a2828);</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="genbutt">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>250</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>19</pointsize>
+      <italic>true</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(0, 0, 0) ;
+	
+color: rgb(255, 42, 50);
+border-radius: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Generate</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="numcheck">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox::indicator
+{
+background-color : rgb(174, 255, 214);
+border-radius:12px;
+width:25px;
+height:25px;
+
+
+}
+
+
+QCheckBox::indicator:checked
+{
+background-color: rgb(42, 255, 0);
+background-image:url(/Users/farzad/Downloads/cc.png)
+
+}
+
+QCheckBox{
+background-color: none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Numbers</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="charcheck">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>40</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox::indicator
+{
+background-color : rgb(174, 255, 214);
+border-radius:12px;
+width:25px;
+height:25px;
+
+
+}
+
+
+QCheckBox::indicator:checked
+{
+background-color: rgb(42, 255, 0);
+background-image:url(/Users/farzad/Downloads/cc.png)
+
+}
+
+QCheckBox{
+background-color: none;
+border-radius:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Charecters</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>110</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>20</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox::up-arrow
+{
+background-image : url(/Users/farzad/Downloads/upt.png);
+border-radius: 5px;
+	background-color: none;
+}
+
+QSpinBox::down-arrow
+{
+background-image : url(/Users/farzad/Downloads/down.png);
+object-position:center;
+border-radius: 5px;
+	background-color: none;
+
+}
+QSpinBox{
+background-color: none;
+border-radius: 10px;
+border: 3px solid rgb(0, 0, 0);
+
+}
+      
+
+	
+	
+
+</string>
+    </property>
+    <property name="wrapping">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="specialValueText">
+     <string/>
+    </property>
+    <property name="accelerated">
+     <bool>false</bool>
+    </property>
+    <property name="correctionMode">
+     <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+    </property>
+    <property name="minimum">
+     <number>4</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="stepType">
+     <enum>QAbstractSpinBox::DefaultStepType</enum>
+    </property>
+    <property name="value">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="upbutt">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>90</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;
+border-radius:5px;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Downloads/up.png</normaloff>../Downloads/up.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="downbutt">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>130</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;
+border-radius:5px;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Downloads/downn.png</normaloff>../Downloads/downn.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>23</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
+    <property name="text">
+     <string>Amont of charecters:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>180</y>
+      <width>411</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+background-color: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::LogicalMoveStyle</enum>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="genbutt_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>170</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>13</pointsize>
+      <italic>true</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255, 240, 85) ;
+	
+color: rgb(0, 0, 0);
+border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>COPY</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="genbutt_3">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>210</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>13</pointsize>
+      <italic>true</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255, 240, 85) ;
+	
+color: rgb(0, 0, 0);
+border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>CLEAR</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="alphacheck">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>40</y>
+      <width>151</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Copperplate</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox::indicator
+{
+background-color : rgb(174, 255, 214);
+border-radius:12px;
+width:25px;
+height:25px;
+
+
+}
+
+
+QCheckBox::indicator:checked
+{
+background-color: rgb(42, 255, 0);
+background-image:url(/Users/farzad/Downloads/cc.png)
+
+}
+
+QCheckBox{
+background-color: none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Alphabets</string>
+    </property>
+   </widget>
+   <zorder>numcheck</zorder>
+   <zorder>charcheck</zorder>
+   <zorder>spinBox</zorder>
+   <zorder>upbutt</zorder>
+   <zorder>downbutt</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>genbutt</zorder>
+   <zorder>label</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>genbutt_2</zorder>
+   <zorder>genbutt_3</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>upbutt</sender>
+   <signal>clicked()</signal>
+   <receiver>spinBox</receiver>
+   <slot>stepUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downbutt</sender>
+   <signal>clicked()</signal>
+   <receiver>spinBox</receiver>
+   <slot>stepDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>370</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
